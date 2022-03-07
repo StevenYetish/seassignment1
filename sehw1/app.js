@@ -1,11 +1,11 @@
-//Server
+//Server setup
 const express = require('express');
 const app = express();
 const path = require("path");
 const router = express.Router();
 const port = 3000;
 
-app.use(express.static(__dirname+"/javascripts"));
+app.use(express.static(__dirname+"/public"));
 //Load html homepage at start
 app.get('/', function (req, res){
   res.sendFile(path.join(__dirname, 'home.html'));

@@ -3,17 +3,29 @@
 
 <head>
     <meta charset = "utf-8">
-    <script src="./javascripts/index.js" type="text/html"></script>
+    <script src="/index.js" type="text/javascript"></script>
     <title>RESTful Tweets</title>        
 </head>
 
-<body>
+<body style="background-color:lightblue;">
     <h1 align="center">
-        <!--A button that displays user ID's when clicked-->
-        <button id="getTweets" onclick="getID()">View Tweets</button>
-        <!--A button that displays a tweet and date tweeted when clicked-->
-        <button id="getID" onclick="getTweets()">Get Users</button>
+        <label>RESTful Tweets</label>
     </h1>
+    <h3 align="center">
+        <!--A button that displays user ID's when clicked-->
+        <button id="getID" onclick="getId()">Get Users</button>
+        <!--A button that displays a tweet and date tweeted when clicked-->
+        <button id="getUsers" onclick="getTweet()">Get Tweets</button>  
+        <!--Label for Tweet by ID Search-->
+        <label >Search by ID</label>
+        <!--Input field for ID-->
+        <input type="text" id="inputID">
+        <!--Button that executes getTweetsById function-->
+        <button id="getTweetById" onclick="getTweetById()">Search</button>
+        <!--Button that executes delete function on a tweet searched by ID-->
+        <button id="deleteTweetById" onclick="deleteTweetById()">Delete</button>
+    </h3>
+
     <!--The above functions display here-->
     <div id="display" align="center"></div>
 
